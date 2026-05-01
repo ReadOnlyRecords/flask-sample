@@ -21,6 +21,7 @@ jobs:
       packages: write
       attestations: write
       id-token: write
+      artifact-metadata: write
       #
     steps:
       - name: Checkout repository
@@ -62,3 +63,8 @@ jobs:
       - uses: anchore/sbom-action@v0
         with:
           path: ./
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: my-artifact
+          path: path/to/artifact/
