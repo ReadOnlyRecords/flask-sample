@@ -60,11 +60,4 @@ jobs:
           push-to-registry: true
       
 
-      - uses: anchore/sbom-action@v0
-        with:
-          path: ./
 
-      - uses: actions/upload-artifact@v7
-        with:
-          name: my-artifact
-          path: path/to/artifact/
